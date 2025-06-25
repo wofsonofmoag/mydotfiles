@@ -1,0 +1,108 @@
+<font color="#ffffff">Here's a list of **50 fresh and unique Arch Linux command-line aliases** that are **not commonly used or found in basic configs**, designed to help with package management, system info, cleanup, and efficiency. These aliases are creative, safe, and should not conflict with standard aliases:</font>
+
+<font color="#ffffff">---</font>
+
+<font color="#ffffff">### ⚙️ **System Management**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias sysrefresh='sudo pacman -Syyu'</font>
+<font color="#ffffff">alias sysfast='sudo pacman -Sy --noconfirm'</font>
+<font color="#ffffff">alias syspurge='sudo pacman -Rns $(pacman -Qdtq)'</font>
+<font color="#ffffff">alias syspaclean='sudo paccache -r'</font>
+<font color="#ffffff">alias sysorph='pacman -Qdt'</font>
+<font color="#ffffff">alias sysup='sudo pacman -Syu'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 📦 **Package Tools**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias pfind='pacman -Ss'</font>
+<font color="#ffffff">alias pown='pacman -Qi'</font>
+<font color="#ffffff">alias pfiles='pacman -Ql'</font>
+<font color="#ffffff">alias prem='sudo pacman -R'</font>
+<font color="#ffffff">alias prmv='sudo pacman -Rns'</font>
+<font color="#ffffff">alias pclean='sudo pacman -Rns $(pacman -Qdtq)'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 📚 **AUR + yay Support**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias yinstall='yay -S'</font>
+<font color="#ffffff">alias ysearch='yay -Ss'</font>
+<font color="#ffffff">alias yremove='yay -Rns'</font>
+<font color="#ffffff">alias yup='yay -Syu --noconfirm'</font>
+<font color="#ffffff">alias yclean='yay -Yc'</font>
+<font color="#ffffff">alias yorph='yay -Qtdq'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 🧼 **Cleanup Utilities**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias cleanpkg='sudo pacman -Rns $(pacman -Qdtq)'</font>
+<font color="#ffffff">alias cleanaur='yay -Yc'</font>
+<font color="#ffffff">alias cleansys='sudo pacman -Sc && yay -Sc'</font>
+<font color="#ffffff">alias cleanlog='sudo journalctl --vacuum-time=3d'</font>
+<font color="#ffffff">alias cleantemp='rm -rf /tmp/* ~/.cache/*'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 🕵️ **Monitoring and Debugging**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias ports='ss -tuln'</font>
+<font color="#ffffff">alias cpu='lscpu'</font>
+<font color="#ffffff">alias mem='free -h'</font>
+<font color="#ffffff">alias disk='lsblk -f'</font>
+<font color="#ffffff">alias topu='htop'</font>
+<font color="#ffffff">alias psu='ps auxf'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 🔎 **Info Tools**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias os='cat /etc/os-release'</font>
+<font color="#ffffff">alias kern='uname -r'</font>
+<font color="#ffffff">alias archver='pacman -Q archlinux-keyring'</font>
+<font color="#ffffff">alias upinfo='checkupdates'</font>
+<font color="#ffffff">alias uptimef='uptime -p'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 🛠️ **Customization and Shortcuts**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias ealias='nano ~/.bash_aliases'</font>
+<font color="#ffffff">alias ralias='source ~/.bashrc'</font>
+<font color="#ffffff">alias x='exit'</font>
+<font color="#ffffff">alias cls='clear'</font>
+<font color="#ffffff">alias mkd='mkdir -pv'</font>
+<font color="#ffffff">alias rf='rm -rf'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">### 🐧 **Fun & Misc**</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">alias sayhello='echo "Hello from Arch, $(whoami)!"'</font>
+<font color="#ffffff">alias cowsaypac='cowsay "Pacman is hungry!"'</font>
+<font color="#ffffff">alias blessup='yay -Syu && echo "System Blessed 🙏"'</font>
+<font color="#ffffff">alias pingfast='ping -c 3 1.1.1.1'</font>
+<font color="#ffffff">alias pacsize='expac -H M "%m\t%n" | sort -h'</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">---</font>
+
+<font color="#ffffff">### 📌 How to Add These</font>
+
+<font color="#ffffff">Append the aliases to your `~/.bashrc`, `~/.zshrc`, or `~/.bash_aliases`:</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">nano ~/.bashrc</font>
+<font color="#ffffff"># Or for zsh</font>
+<font color="#ffffff">nano ~/.zshrc</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">Then run:</font>
+
+<font color="#ffffff">```bash</font>
+<font color="#ffffff">source ~/.bashrc</font>
+<font color="#ffffff">```</font>
+
+<font color="#ffffff">Want aliases tailored to tools like `paru`, `trizen`, or desktop-specific utilities? Let me know!</font>
