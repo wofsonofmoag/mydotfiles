@@ -1,0 +1,62 @@
+<font color="#ffffff">alias update='sudo pacman -Syu'                       # Full system update</font>
+<font color="#ffffff">alias upg='sudo pacman -Syyu'                         # Force refresh & update</font>
+<font color="#ffffff">alias pacs='pacman -Ss'                               # Search packages</font>
+<font color="#ffffff">alias paci='sudo pacman -S'                           # Install package</font>
+<font color="#ffffff">alias pacr='sudo pacman -Rns'                         # Remove package and dependencies</font>
+<font color="#ffffff">alias pacq='pacman -Qi'                               # Info on installed package</font>
+<font color="#ffffff">alias pacl='pacman -Ql'                               # List files in a package</font>
+<font color="#ffffff">alias pacf='pacman -F'                                # Search files in repo</font>
+<font color="#ffffff">alias pacc='sudo pacman -Sc'                          # Clear cache (keep current)</font>
+<font color="#ffffff">alias paccc='sudo pacman -Scc'                        # Clear all cache</font>
+
+<font color="#ffffff">### 🧑‍💻 **AUR Helpers (yay)**</font>
+<font color="#ffffff">alias yays='yay -Ss'                                  # Search in AUR</font>
+<font color="#ffffff">alias yayi='yay -S'                                   # Install from AUR</font>
+<font color="#ffffff">alias yayr='yay -Rns'                                 # Remove AUR package</font>
+<font color="#ffffff">alias yaya='yay -Sua'                                 # Upgrade AUR packages</font>
+<font color="#ffffff">alias yayu='yay -Syu --noconfirm'                     # Full system + AUR update</font>
+<font color="#ffffff">alias yaysafe='yay -Syu --noconfirm --removemake'     # Update & remove build deps</font>
+
+<font color="#ffffff">### 🔍 **System Info & Resources**</font>
+<font color="#ffffff">alias meminfo='free -h'                               # RAM usage</font>
+<font color="#ffffff">alias cpuinfo='lscpu'                                 # CPU info</font>
+<font color="#ffffff">alias diskuse='df -h'                                 # Disk space</font>
+<font color="#ffffff">alias lsblk='lsblk -f'                                # Block devices</font>
+<font color="#ffffff">alias usb='lsusb'                                     # USB devices</font>
+<font color="#ffffff">alias pci='lspci'                                     # PCI devices</font>
+<font color="#ffffff">alias ipinfo='ip a'                                   # IP address</font>
+<font color="#ffffff">alias ports='ss -tuln'                                # Open ports</font>
+<font color="#ffffff">alias top10='ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'  # Top 10 by mem</font>
+
+<font color="#ffffff">### 🧹 **Cleanup & Maintenance**</font>
+<font color="#ffffff">alias cleanpac='sudo pacman -Rns $(pacman -Qdtq)'     # Remove unused packages</font>
+<font color="#ffffff">alias cleanorphans='sudo pacman -Rns $(pacman -Qtdq)' # Orphans</font>
+<font color="#ffffff">alias cleancache='sudo pacman -Scc'                   # Clean cache</font>
+<font color="#ffffff">alias cleanall='cleanpac && cleancache'               # Full cleanup</font>
+
+<font color="#ffffff">### 🧰 **System Tools**</font>
+<font color="#ffffff">alias reb='sudo systemctl reboot'                     # Reboot</font>
+<font color="#ffffff">alias halt='sudo systemctl poweroff'                  # Shutdown</font>
+<font color="#ffffff">alias restartnet='sudo systemctl restart NetworkManager'  # Restart network</font>
+<font color="#ffffff">alias journal='journalctl -p 3 -xb'                   # View system errors</font>
+<font color="#ffffff">alias syslog='journalctl -f'                          # Live logs</font>
+<font color="#ffffff">alias sysfail='systemctl --failed'                    # Failed services</font>
+<font color="#ffffff">alias enable='sudo systemctl enable'                  # Enable service</font>
+<font color="#ffffff">alias disable='sudo systemctl disable'                # Disable service</font>
+<font color="#ffffff">alias start='sudo systemctl start'                    # Start service</font>
+<font color="#ffffff">alias stop='sudo systemctl stop'                      # Stop service</font>
+
+<font color="#ffffff">### 📁 **File Management Shortcuts**</font>
+<font color="#ffffff">alias ll='ls -lah'                                    # Long list with hidden</font>
+<font color="#ffffff">alias la='ls -A'                                      # List all except .</font>
+<font color="#ffffff">alias l='ls -CF'                                      # Simple list</font>
+<font color="#ffffff">alias ..='cd ..'                                      # Go up</font>
+<font color="#ffffff">alias ...='cd ../..'                                  # Go up two</font>
+<font color="#ffffff">alias mkdir='mkdir -pv'                               # Make dirs, verbose</font>
+
+<font color="#ffffff">### 💻 **Productivity**</font>
+<font color="#ffffff">alias clr='clear'                                     # Clear screen</font>
+<font color="#ffffff">alias edbash='nano ~/.bashrc'                         # Edit .bashrc</font>
+<font color="#ffffff">alias srcbash='source ~/.bashrc'                      # Reload .bashrc</font>
+<font color="#ffffff">alias edzsh='nano ~/.zshrc'                           # Edit .zshrc</font>
+<font color="#ffffff">alias srczsh='source ~/.zshrc'                        # Reload .zshrc</font>
