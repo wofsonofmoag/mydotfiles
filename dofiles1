@@ -1,0 +1,27 @@
+grep commands
+alias grep='grep --color=auto'
+
+# update commands
+alias up='sudo pacman -Syu'
+alias update="sudo pacman -Syyu"
+alias cleanall='cleanpac && cleancache'
+
+#instal commamd
+alias in='sudo -S'
+
+#ping commands
+alias ping='ping -i 5 odysee.com'
+
+#remove commands
+alias rm='sudo pacman -Rns'
+
+#misc. commamds
+alias topu='btop'
+
+# cd files
+alias cd.1="cd .."
+alias cd.2="cd ../.."
+alias cd.3="cd ../../.."
+alias cd.4="cd ../../../.."
+alias cd.5="cd ../../../../.."
+alias cd.6="cd ../../../../../.."
